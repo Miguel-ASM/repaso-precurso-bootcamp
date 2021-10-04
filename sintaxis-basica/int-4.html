@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Funciones int: ejercicio 4</h1>
+    <script>
+        let time = parseInt(prompt('Introduce un tiempo en segundos'));
+        
+        let hours = Math.floor(time / 3600 );
+        time = time % 3600;
+
+        let minutes = Math.floor( time / 60 );
+        time = time % 60;
+
+        let seconds = time;
+
+        console.log(hours + ' horas, ' + minutes + ' minutos, ' + seconds + ' segundos' );
+
+    </script>
+</body>
+</html>
