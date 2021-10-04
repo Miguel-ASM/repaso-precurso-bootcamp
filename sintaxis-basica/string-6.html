@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Funciones string: ejercicio 6</h1>
+    <script>
+        let my_string = prompt('Introduce una expresión de suma');
+        let posicion_simbolo = my_string.indexOf('+');
+        let primer_sumando = parseInt(my_string.substring(0,posicion_simbolo));
+        let segundo_sumando = parseInt(my_string.substring(posicion_simbolo+1));
+
+        console.log(
+            'La suma de ' +
+            primer_sumando + 
+            ' y ' + 
+            segundo_sumando + 
+            ' es ' + (primer_sumando+segundo_sumando)
+        );
+    </script>
+</body>
+</html>
