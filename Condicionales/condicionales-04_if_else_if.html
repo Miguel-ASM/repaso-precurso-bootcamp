@@ -7,17 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Funciones int: ejercicio 7</h1>
+    <h1>Condicionales: ejercicio 4 (if else if)</h1>
     <script>
-        let a = prompt('Primera variable');
-        let b = prompt('Segunda variable');
-
-        let c = a;
-        a = b;
-        b = c;
-
-        console.log('Primera variable: ',a);
-        console.log('Segunda variable: ',b);
+        let dia = prompt('Esribe un día de la semana');
+        if ( ['sabado','domingo'].includes(dia) ){
+            console.log('Ya es finde!');
+        } else {
+            console.log(dia);
+        }
     </script>
 </body>
 </html>

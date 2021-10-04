@@ -7,17 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Funciones int: ejercicio 7</h1>
+    <h1>Condicionales: ejercicio 2</h1>
     <script>
-        let a = prompt('Primera variable');
-        let b = prompt('Segunda variable');
 
-        let c = a;
-        a = b;
-        b = c;
+        let edad = parseInt(prompt('Introduce tu edad'));
+        if (edad <= 8) {
+            console.log('Pasa al tobogán.');
+        } else {
+            console.log('Eres demasiado mayor para usar el tobogán.');
+        }
 
-        console.log('Primera variable: ',a);
-        console.log('Segunda variable: ',b);
     </script>
 </body>
 </html>
