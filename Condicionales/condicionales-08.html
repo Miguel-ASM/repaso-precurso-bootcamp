@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        let path = window.location.pathname;
+        let page = path.split("/").pop();
+        h1 = document.querySelector('h1');
+        h1.innerHTML = page;
+    </script>
+    <script>
+        let frase = prompt('Introduce una frase');
+        let l_frase = frase.length;
+        let longitud_es_par = !(l_frase%2);
+        if (longitud_es_par) {
+            console.log(
+                frase.substr(l_frase/2-1,2)
+            );
+        } else {
+            console.log(
+                frase.substr(l_frase/2,1)
+            );
+        }
+        
+    </script>
+</body>
+</html>

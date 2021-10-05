@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        let path = window.location.pathname;
+        let page = path.split("/").pop();
+        h1 = document.querySelector('h1');
+        h1.innerHTML = page;
+    </script>
+    <script>
+        let mensaje = prompt('Dile algo a Bob');
+        
+        es_pregunta = mensaje.endsWith('?');
+        es_grito    = mensaje.endsWith('!');
+        es_grito_y_pregunta = mensaje.endsWith('!?');
+
+        if (es_grito_y_pregunta) {
+            console.log('¡Eh, tranquilízate! Yo sé lo que hago.');
+        } else if (es_grito) {
+            console.log('¡Eh, tranquilízate!');
+        } else if (es_pregunta){
+            console.log('Claro!');
+        } else {
+            console.log('Sin más');
+        }
+
+    </script>
+</body>
+</html>

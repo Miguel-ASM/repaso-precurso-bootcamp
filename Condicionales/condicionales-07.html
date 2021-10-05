@@ -7,16 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Condicionales: ejercicio 5</h1>
+    <h1>Condicionales: ejercicio 7</h1>
     <script>
-        let primer_numero = parseInt( prompt('Introduce un numero entre 25 y 75') );
-        let segundo_numero = parseInt( prompt('Introduce otro numero entre 25 y 75') );
-
-        if ( (25 <= primer_numero <= 75) & (25 <= segundo_numero <= 75)){
-
-        } else {
-            console.log('Los dos numeros tienen que estar entre 25 y 75!!');
+        let primer_numero  = prompt('Introduce un numero entre 25 y 75');
+        let segundo_numero = prompt('Introduce otro numero entre 25 y 75');
+        let mensaje = 'Los dos numeros tienen que estar entre 25 y 75!!';
+        // Comprobar si los numeros cumplen la condicion
+        if ( 
+            Math.min(parseInt(primer_numero),parseInt(segundo_numero)) >= 25 &
+            Math.max(parseInt(primer_numero),parseInt(segundo_numero)) <= 75
+        ){ // Si cumplen la condicion comprobar si tienen digitos en comun
+            mensaje = (
+                primer_numero.includes(segundo_numero[0]) ||
+                primer_numero.includes(segundo_numero[1])
+            ) ?
+            'Los dos números tienen dígitos en común.' :
+            'Los dos números no tienen digitos en comun'
         }
+        console.log(mensaje);
     </script>
 </body>
 </html>

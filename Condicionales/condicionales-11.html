@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        let path = window.location.pathname;
+        let page = path.split("/").pop();
+        h1 = document.querySelector('h1');
+        h1.innerHTML = page;
+    </script>
+    <script>
+        let nota_primer_examen =  parseInt(prompt('Nota del primer examen'));
+        let nota_segundo_examen = parseInt(prompt('Nota del segundo examen'));
+        let nota_tercer_examen =  parseInt(prompt('Nota del tercer examen'));
+        let nota_final = Math.max(nota_primer_examen,nota_segundo_examen) + nota_tercer_examen;
+        let resultado;
+        if (nota_final === 10) {
+            resultado = 'Matrícula';
+        } else if (nota_final >= 9) {
+            resultado = 'Sobresaliente';
+        } else if (nota_final >= 7) {
+            resultado = 'Notable';
+        } else if (nota_final >= 6) {
+            resultado = 'Bien';
+        } else if (nota_final >= 5) {
+            resultado = 'Suficiente';
+        } else {
+            resultado = 'Suspenso'
+        }
+        console.log(nota_final +'  :  ' + resultado);
+    </script>
+</body>
+</html>
