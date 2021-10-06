@@ -12,21 +12,16 @@
     <h1></h1>
     <!--  -->
     <script>
-        let altura = parseInt( prompt('Altura de la piramide') );
-        let base   = 2*altura -1;
-        let grosor_piso;
+        let altura = parseInt(prompt('Altura de la piramide'));
+        let base = 2 * altura - 1;
+        let piramide = '';
         for (let i = 0; i < altura; i++) {
-            grosor_piso = 2*i +1
-            console.log(
-                ' '.repeat( (base-grosor_piso)/2 ) +
-                '#'.repeat(  grosor_piso )          +
-                ' '.repeat( (base-grosor_piso)/2 )
-            );
+            for (let j = 0; j < base; j++) {
+                piramide += (Math.abs(altura - j - 1) <= i) ? '#' : ' ';
+            }
+            piramide += '\n'
         }
-    </script>
-    <!--  -->
-    <script>
-        
+        console.log(piramide);
     </script>
 </body>
 
